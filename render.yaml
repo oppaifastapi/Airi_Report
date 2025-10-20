@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: airi-report
+    env: python
+    region: singapore
+    plan: free
+    buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    autoDeploy: true
+    healthCheckPath: /healthz
+    envVars:
+      - key: ENV
+        value: "prod"
+      - key: OPPAI_API_BASE
+        value: "https://oppaifastapi.onrender.com"
+      - key: OPPAI_API_TOKEN
+        value: ""

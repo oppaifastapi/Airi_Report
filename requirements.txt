@@ -5,7 +5,7 @@ python-dotenv==1.0.1
 pydantic==2.6.4
 requests==2.32.3
 
-# Data/market
+# Data/market (휠 제공되는 버전)
 numpy==2.1.2
 pandas==2.2.2
 lxml==5.2.1
